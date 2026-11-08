@@ -1,0 +1,84 @@
+\
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080d18">
+  <meta name="description" content="Project Eclipse member dashboard and identity portal.">
+  <title>Project Eclipse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="/"><span class="brand-icon">E</span><span>PROJECT <b>ECLIPSE</b></span></a>
+      <div class="side-label">WORKSPACE</div>
+      <a class="nav-item active" href="#"><span class="nav-icon">▦</span> Overview <span class="nav-dot"></span></a>
+      <a class="nav-item" href="#identity"><span class="nav-icon">◇</span> My identity</a>
+      <div class="sidebar-bottom">
+        <div class="sidebar-status"><i></i><span><b>All systems operational</b><small>Project Eclipse services</small></span></div>
+        <div class="side-version">PROJECT ECLIPSE <span>V1.0</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-icon">E</span> PROJECT <b>ECLIPSE</b></div>
+        <div class="crumb">Workspace <span>/</span> Overview</div>
+        <div class="top-right"><span class="live-pill"><i></i> LIVE</span><div id="top-user" class="top-user">GUEST</div></div>
+      </header>
+
+      <section class="content">
+        <div class="welcome-row">
+          <div>
+            <div class="eyebrow"><span></span> MEMBER PORTAL</div>
+            <h1>Welcome to <span>Project Eclipse.</span></h1>
+            <p class="subtitle">Your personal space. Your unique identity.</p>
+          </div>
+          <div class="date-chip"><span class="date-dot"></span> IDENTITY SYSTEM</div>
+        </div>
+
+        <section id="login-card" class="login-panel">
+          <div class="login-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="planet"></div><div class="art-star star-a">✦</div><div class="art-star star-b">✧</div></div>
+          <div class="login-copy">
+            <div class="card-kicker">GET STARTED</div>
+            <h2>Your Eclipse identity<br>starts here.</h2>
+            <p>Connect your Discord account to receive a unique member ID. Your ID is saved securely and stays yours every time you return.</p>
+            <a class="discord-btn" href="/auth/discord"><span class="discord-mark">◉</span> Continue with Discord <span class="btn-arrow">↗</span></a>
+            <div class="privacy-note"><span>⌑</span> Secure Discord authentication · No password stored</div>
+          </div>
+        </section>
+
+        <section id="dashboard" class="dashboard" hidden>
+          <div class="stats-grid">
+            <article class="stat-card"><div class="stat-top"><span>ACCOUNT STATUS</span><span class="stat-symbol green">●</span></div><strong class="stat-value status-value">ACTIVE</strong><small>Your Discord account is connected</small></article>
+            <article class="stat-card"><div class="stat-top"><span>MEMBER IDENTIFIER</span><span class="stat-symbol blue">◇</span></div><strong class="stat-value" id="mini-id">ECL-00000000</strong><small>Your permanent Eclipse ID</small></article>
+            <article class="stat-card"><div class="stat-top"><span>IDENTITY PROVIDER</span><span class="stat-symbol purple">◎</span></div><strong class="stat-value">DISCORD</strong><small>Verified through Discord OAuth</small></article>
+          </div>
+
+          <div class="section-heading"><div><div class="card-kicker">YOUR ACCOUNT</div><h2>Identity overview</h2></div><span class="section-tag">PERSONAL</span></div>
+          <article class="identity-card" id="identity">
+            <div class="identity-header"><div class="profile"><img id="avatar" alt="Discord avatar"><div><span class="muted">SIGNED IN AS</span><h3 id="username">Discord user</h3><span class="verified"><i></i> Discord connected</span></div></div><span class="member-badge">ECLIPSE MEMBER</span></div>
+            <div class="id-display"><div><span class="muted">YOUR UNIQUE PROJECT ECLIPSE ID</span><strong id="public-id">ECL-00000000</strong></div><button id="copy-btn" class="copy-btn">▢ <span>COPY ID</span></button></div>
+            <div class="identity-footer"><span><i></i> ID permanently assigned to your account</span><button id="logout-btn" class="logout-btn">Log out ↗</button></div>
+          </article>
+          <p class="message" id="message" role="status"></p>
+        </section>
+
+        <div class="feature-row">
+          <div class="feature"><span class="feature-icon">◇</span><div><b>Unique by design</b><small>Every account receives its own ID.</small></div></div>
+          <div class="feature"><span class="feature-icon">⌑</span><div><b>Secure sign-in</b><small>Authentication handled by Discord.</small></div></div>
+          <div class="feature"><span class="feature-icon">↻</span><div><b>Always yours</b><small>Your assigned ID stays the same.</small></div></div>
+        </div>
+        <footer><span>© PROJECT ECLIPSE</span><span>BUILT FOR THE COMMUNITY</span></footer>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
